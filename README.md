@@ -3,6 +3,9 @@
 A small script to create a sass architecture with an input name, index.html, severals directories and a sass compile and watch file.
 Feel free to modify it at your convenience.
 
+Copy the files .sh in the directory and launch it. 
+It will delete itself automatically.
+
 input_name
     sass
         components
