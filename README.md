@@ -1,12 +1,12 @@
 # sass_architecture_creator_script
 
-A small script to create a sass architecture with an input name, index.html, severals directories and a sass compile and watch file.
-Feel free to modify it at your convenience.
+A small script to create a sass architecture with an index.html, severals directories and a sass compile and watch file.
+The script will commit and push the changes automatically.
 
-Copy the files .sh in the directory and launch it. 
+Copy the file .sh in your local directory and launch it. 
 It will delete itself automatically.
 
-input_name
+    css
     sass
         components
             _button.scss
@@ -22,5 +22,5 @@ input_name
             _variables.scss
         _main.scss              (include the @import of every .scss files)
     index.html                  (include <head> with link to style.css)
-    sass-watch-launcher.sh      (compile file style.css and create style.css.map)
+    sass-watch-launcher.sh      (compile file css/style.css and create style.css.map)
             
