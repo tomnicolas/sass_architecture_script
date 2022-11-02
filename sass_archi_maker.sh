@@ -20,7 +20,10 @@ cat > _main.scss << EOF
 @import "utils/variables";
 @import "utils/mixins";
 
+@import "base/base";
+
 @import "pages/home";
+@import "pages/contact";
 
 @import "layout/header";
 @import "layout/footer";
@@ -29,14 +32,16 @@ cat > _main.scss << EOF
 
 @import "components/buttons";
 EOF
-mkdir utils pages layout components
+mkdir utils pages layout components base
 cd utils/
 touch _mixins.scss _variables.scss
 cd ./../pages
-touch _home.scss
+touch _home.scss _contact.scss
 cd ./../layout 
-touch _header.scss _footer.scss _navbar.scss _forms.scss
-cd ./../components/
+touch _header.scss _footer.scss _navigation.scss _forms.scss
+cd ./../base
+touch _typography.scss _normalyse.scss
+cd ./../components
 touch _buttons.scss
 cd ./../../
 cat > sass-watch-launcher.sh << EOF
