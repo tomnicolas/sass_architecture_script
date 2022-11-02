@@ -1,6 +1,3 @@
-read NAME
-mkdir $NAME
-cd $NAME/
 cat > index.html << EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +14,7 @@ cat > index.html << EOF
 </body>
 </html>
 EOF
-mkdir sass
+mkdir sass css
 cd sass/
 cat > _main.scss << EOF
 @import "utils/variables";
@@ -43,7 +40,11 @@ cd ./../components/
 touch _buttons.scss
 cd ./../../
 cat > sass-watch-launcher.sh << EOF
-sass sass/_main.scss:style.css --watch
+sass sass/_main.scss:css/style.css --watch
 EOF
 chmod +x sass-watch-launcher.sh
+rm sass_archi_maker.sh
+git add *
+git commit -m "sass architecture"
+git push
 
